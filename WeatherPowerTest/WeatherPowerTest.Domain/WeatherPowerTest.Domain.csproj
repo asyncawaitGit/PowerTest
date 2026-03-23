@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>6cdd70d7-6f1f-41d9-81e9-2328cde1ca1d</ProjectGuid>
+    <ProjectGuid>{6CDD70D7-6F1F-41D9-81E9-2328CDE1CA1D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WeatherPowerTest.Domain</RootNamespace>
@@ -31,24 +31,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Constants\ApiConstants.cs" />
+    <Compile Include="Entities\DailyForecast.cs" />
+    <Compile Include="Entities\CurrentWeather.cs" />
+    <Compile Include="Entities\HourlyForecast.cs" />
+    <Compile Include="Entities\WeatherData.cs" />
+    <Compile Include="Enums\WeatherConditionType.cs" />
+    <Compile Include="Exceptions\WeatherApiException.cs" />
+    <Compile Include="Exceptions\WeatherException.cs" />
+    <Compile Include="Exceptions\WeatherNotFoundException.cs" />
+    <Compile Include="Exceptions\WeatherValidationException.cs" />
+    <Compile Include="Extensions\WeatherConditionExtensions.cs" />
+    <Compile Include="Interfaces\IWeatherRepository.cs" />
+    <Compile Include="Interfaces\IWeatherService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueObjects\Humidity.cs" />
+    <Compile Include="ValueObjects\Temperature.cs" />
+    <Compile Include="ValueObjects\Wind.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
