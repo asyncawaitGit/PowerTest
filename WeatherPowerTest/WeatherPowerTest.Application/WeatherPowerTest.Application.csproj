@@ -44,7 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="DTOs\CurrentWeatherDto.cs" />
     <Compile Include="DTOs\DailyForecastDto.cs" />
     <Compile Include="DTOs\HourlyForecastDto.cs" />
