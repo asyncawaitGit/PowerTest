@@ -56,7 +56,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClients\WeatherApiClient.cs" />
+    <Compile Include="Cache\InMemoryWeatherCache.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Configuration\WeatherApiSettings.cs" />
+    <Compile Include="Exceptions\CacheException.cs" />
+    <Compile Include="Exceptions\HttpRequestException.cs" />
+    <Compile Include="Exceptions\InfrastructureException.cs" />
+    <Compile Include="Extensions\ServiceCollectionExtensions.cs" />
+    <Compile Include="Factories\HttpClientFactory.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +73,14 @@
       <Project>{b01ed88e-9728-4d3f-aa4a-dd16997400f8}</Project>
       <Name>WeatherPowerTest.Application</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeatherPowerTest.Domain\WeatherPowerTest.Domain.csproj">
+      <Project>{6CDD70D7-6F1F-41D9-81E9-2328CDE1CA1D}</Project>
+      <Name>WeatherPowerTest.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
