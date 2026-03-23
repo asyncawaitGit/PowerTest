@@ -45,7 +45,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DTOs\CurrentWeatherDto.cs" />
+    <Compile Include="DTOs\DailyForecastDto.cs" />
+    <Compile Include="DTOs\HourlyForecastDto.cs" />
+    <Compile Include="DTOs\LocationDto.cs" />
+    <Compile Include="DTOs\WeatherDataDto.cs" />
+    <Compile Include="Exceptions\ApplicationLayerException.cs" />
+    <Compile Include="Exceptions\CacheException.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Interfaces\IWeatherApiClient.cs" />
+    <Compile Include="Interfaces\IWeatherCache.cs" />
+    <Compile Include="Mappings\WeatherMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\GetWeatherQuery.cs" />
+    <Compile Include="Responses\WeatherApiResponse.cs" />
+    <Compile Include="Services\WeatherService.cs" />
+    <Compile Include="Validators\WeatherDataValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WeatherPowerTest.Domain\WeatherPowerTest.Domain.csproj">
