@@ -153,6 +153,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\DependencyResolverHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +243,10 @@
     <ProjectReference Include="..\WeatherPowerTest.Application\WeatherPowerTest.Application.csproj">
       <Project>{b01ed88e-9728-4d3f-aa4a-dd16997400f8}</Project>
       <Name>WeatherPowerTest.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeatherPowerTest.Domain\WeatherPowerTest.Domain.csproj">
+      <Project>{6CDD70D7-6F1F-41D9-81E9-2328CDE1CA1D}</Project>
+      <Name>WeatherPowerTest.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\WeatherPowerTest.Infrastructure\WeatherPowerTest.Infrastructure.csproj">
       <Project>{e3cd22a3-7a6e-4b05-8ccd-f488d601f331}</Project>
